@@ -6,8 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "build": "tsc -p .",
-    "start": "node build/index.js"
+    "build": "tsc -p ."
   },
   "dependencies": {
     "@types/cors": "^2.8.13",
