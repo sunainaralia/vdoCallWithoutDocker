@@ -1,0 +1,74 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Build output directories
+build/
+dist/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+
+# Coverage and testing directories
+coverage/
+.nyc_output/
+.grunt/
+
+# Environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm and yarn cache
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Linting cache
+.eslintcache
+.stylelintcache
+
+# Parcel and Snowpack cache
+.cache/
+.parcel-cache/
+web_modules/
+
+# IDE specific
+.vscode/
+.idea/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Docker Artifacts (Remove these if no longer used)
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Others
+temp/
