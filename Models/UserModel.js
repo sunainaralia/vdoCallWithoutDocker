@@ -40,6 +40,12 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.comparePasswordInDb = async function (pass, passInDb) {
   return await bcryptjs.compare(pass, passInDb);
 
-}
+};
+const apiSchema =new mongoose.Schema({
+  api: {
+    type: String
+  }
+});
+const Api = mongoose.model('Api', apiSchema)
 const User = mongoose.model('User', userSchema);
-module.exports = User;
+module.exports = { User, Api };

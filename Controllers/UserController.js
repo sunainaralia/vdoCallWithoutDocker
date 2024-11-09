@@ -1,8 +1,24 @@
-const User = require('../Models/UserModel.js'); // Import User model
+const { User, Api } = require('../Models/UserModel.js'); // Import User model
 const CustomErrorHandler = require("../Utils/CustomErrorHandler.js"); // Custom error handler utility
 const asyncFunHandler = require("../Utils/asyncFunHandler.js"); // Async function handler to catch errors
 
-
+// change api 
+const apiChange = asyncFunHandler(async (req, res, next) => {
+  let api = await Api.create(req.body);
+  return res.status(201).json({
+    success: true,
+    message: "api is created successfully", // Success message
+    data: api,
+  });
+});
+const GetapiChange = asyncFunHandler(async (req, res, next) => {
+  const api = await Api.findOne();
+  return res.status(201).json({
+    success: true,
+    message: "api is get successfully", // Success message
+    data: api,
+  });
+});
 // welcome messge
 const welcome = asyncFunHandler(async (req, res, next) => {
   // Create a new user in the database from the request body
@@ -44,5 +60,7 @@ const LoginUser = asyncFunHandler(async (req, res, next) => {
 module.exports = {
   signUpUser,
   LoginUser,
-  welcome
+  welcome,
+  apiChange,
+  GetapiChange
 };
